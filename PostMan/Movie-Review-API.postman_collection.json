@@ -1,0 +1,810 @@
+{
+	"info": {
+		"_postman_id": "4409beda-61f9-4635-a5c2-f6961fd0eea1",
+		"name": "Movie Review API",
+		"description": "### Endpoint: User Registration\n\n- **Method:** POST\n    \n- **URL:** [http://127.0.0.1:8000/api/users/register/](http://127.0.0.1:8000/api/users/register/)\n    \n- **Headers:**\n    \n    - Content-Type: application/json\n        \n- { \"username\": \"user123\", \"email\": \"user123@example.com\", \"password\": \"UserPassword123\"}",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37687216"
+	},
+	"item": [
+		{
+			"name": "/api/users/logout/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"logout",
+						""
+					]
+				},
+				"description": "### 2\\. User Login\n\n#### Request Setup\n\n- **Method:** `POST`\n    \n- **URL:** `http://127.0.0.1:8000/api/users/login/`\n    \n- **Headers:**\n    \n    - `Content-Type: application/json`\n        \n- **Body:**\n    \n    - **Type:** `raw`\n        \n    - {\"username\": \"user123\",\"password\": \"UserPassword123\"}\n        \n    - Endpoint: User Login\n        \n        - **Method:** POST\n            \n        - **URL:** [http://127.0.0.1:8000/api/users/login/](http://127.0.0.1:8000/api/users/login/)\n            \n        - **Headers:**\n            \n            - Content-Type: application/json\n                \n        - { \"username\": \"user123\", \"password\": \"UserPassword123\"}\n            \n- StartFragment Expected Response:EndFragment\n    \n- StartFragment{  \n    \"token\": \"your-auth-token\"  \n    }EndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/login/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Pankaj1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Pankaj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Canada\",\r\n    \"password\": \"Canada1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/register/\n",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Pankaj1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Pankaj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Canada\",\r\n    \"email\": \"canada@example.com\",\r\n    \"password\": \"Canada1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/register/\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"register",
+						"\n"
+					]
+				},
+				"description": "### Endpoint: User Registration\n\n- **Method:** POST\n    \n- **URL:** [http://127.0.0.1:8000/api/users/register/](http://127.0.0.1:8000/api/users/register/)\n    \n- **Headers:**\n    \n- Content-Type: application/json\n    \n- { \"username\": \"Canada\", \"email\": \"Canada@gmail.com\", \"password\": \"Canada1234\"}"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/movies/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/movies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"movies",
+						""
+					]
+				},
+				"description": "### 3\\. List Movies\n\n#### Request Setup\n\n- **Method:** `GET`\n    \n- **URL:** `http://127.0.0.1:8000/api/users/movies/`\n    \n- **Headers:**\n    \n    - `Authorization: Token` (if authentication is required)\n        \n\n#### Instructions\n\nStartFragment\n\n### Endpoint: List Movies\n\n- **Method:** GET\n    \n- **URL:** [http://127.0.0.1:8000/api/users/movies/](http://127.0.0.1:8000/api/users/movies/)\n    \n- **Headers:**\n    \n    - Authorization: Token (if authentication is required)\n        \n\nEndFragment  \n  \nStartFragment Example Response:EndFragment  \n  \n\\[  \n{  \n\"id\": 1,  \n\"title\": \"Movie Title\",  \n\"description\": \"Movie Description\",  \n\"release_date\": \"2024-01-01\",  \n\"genres\": \\[1, 2\\],  \n\"poster_url\": \"[http://example.com/poster.jpg\"](http://example.com/poster.jpg)  \n}  \n\\]"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/reviews/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/reviews/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"reviews",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/reviews/1/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/movies/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"movies",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/movies/list/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token bb55a78ba0ed218292a0b130e7c0342ee6b37a9f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/movies/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"movies",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/reviews/list/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token bb55a78ba0ed218292a0b130e7c0342ee6b37a9f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/reviews/list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"reviews",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/swagger/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/swagger/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"swagger",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/redoc/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/redoc/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"redoc",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/movies/1/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,  // Replace with an actual movie ID from your database\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/movies/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"movies",
+						"1",
+						""
+					]
+				},
+				"description": "### Movie Detail\n\n#### Request Setup\n\n- **Method:** `GET`\n    \n- **URL:** `http://127.0.0.1:8000/api/users/movies/{id}/`\n    \n- **Headers:**\n    \n    - `Authorization: Token` (if authentication is required)\n        \n\n#### Instructions\n\nStartFragment\n\n### Endpoint: Movie Detail\n\n- **Method:** GET\n    \n- **URL:** [http://127.0.0.1:8000/api/users/movies/{id}/](https://null)\n    \n- **Headers:**\n    \n    - Authorization: Token (if authentication is required)\n        \n\nEndFragment  \n  \nStartFragmentExample Response:EndFragment  \n{  \n\"id\": 1,  \n\"title\": \"Movie Title\",  \n\"description\": \"Movie Description\",  \n\"release_date\": \"2024-01-01\",  \n\"genres\": \\[1, 2\\],  \n\"poster_url\": \"[http://example.com/poster.jpg\"](http://example.com/poster.jpg)  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/reviews/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,\r\n    \"rating\": 5,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/reviews/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"reviews",
+						""
+					]
+				},
+				"description": "### 5\\. Create Review\n\n#### Request Setup\n\n- **Method:** `POST`\n    \n- **URL:** `http://127.0.0.1:8000/api/users/reviews/`\n    \n- **Headers:**\n    \n    - `Authorization: Token`\n        \n    - `Content-Type: application/json`\n        \n- **Body:**\n    \n    - **Type:** `raw`\n        \n    - {\"movie\": 1,\"rating\": 5,\"comment\": \"Great movie!\"}\n        \n    - Endpoint: Create Review\n        \n        - **Method:** POST\n            \n        - **URL:** [http://127.0.0.1:8000/api/users/reviews/](http://127.0.0.1:8000/api/users/reviews/)\n            \n        - **Headers:**\n            \n            - Authorization: Token\n                \n            - Content-Type: application/json\n                \n        - { \"movie\": 1, \"rating\": 5, \"comment\": \"Great movie!\"}\n            \n        - StartFragmentExample Response:EndFragment  \n              \n            {  \n            \"id\": 1,  \n            \"user\": \"user123\",  \n            \"movie\": 1,  \n            \"rating\": 5,  \n            \"comment\": \"Great movie!\"  \n            }"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/reviews/3/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/reviews/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"reviews",
+						"2",
+						""
+					]
+				},
+				"description": "### 6\\. Update Review\n\n#### Request Setup\n\n- **Method:** `PUT`\n    \n- **URL:** `http://127.0.0.1:8000/api/users/reviews/{id}/`\n    \n- **Headers:**\n    \n    - `Authorization: Token`\n        \n    - `Content-Type: application/json`\n        \n- **Body:**\n    \n    - **Type:** `raw`\n        \n    - {\"rating\": 4,\"comment\": \"Updated comment.\"}\n        \n    - Endpoint: Update Review\n        \n        - **Method:** PUT\n            \n        - **URL:** [http://127.0.0.1:8000/api/users/reviews/{id}/](http://127.0.0.1:8000/api/users/reviews/%7Bid%7D/)\n            \n        - **Headers:**\n            \n            - Authorization: Token\n                \n            - Content-Type: application/json\n                \n        - { \"rating\": 4, \"comment\": \"Updated comment.\"}\n            \n        - StartFragment Example Response : EndFragment  \n              \n            {  \n            \"id\": 1,  \n            \"user\": \"user123\",  \n            \"movie\": 1,  \n            \"rating\": 4,  \n            \"comment\": \"Updated comment.\"  \n            }"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/users/reviews/3/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token d10ae04a2f33b24724ebbe351395962806f0c20e",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 64c32538558432242355eed42f5f0e38ba5f6cc6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\": 2,\r\n    \"rating\": 3,\r\n    \"comment\": \"An amazing movie with great special effects.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/reviews/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"reviews",
+						"2",
+						""
+					]
+				},
+				"description": "### 7\\. Delete Review\n\n#### Request Setup\n\n- **Method:** `DELETE`\n    \n- **URL:** `http://127.0.0.1:8000/api/users/reviews/{id}/`\n    \n- **Headers:**\n    \n    - `Authorization: Token`\n        \n\n#### Instructions\n\nStartFragment\n\n### Endpoint: Delete Review\n\n- **Method:** DELETE\n    \n- **URL:** [http://127.0.0.1:8000/api/users/reviews/{id}/](https://null)\n    \n- **Headers:**\n    \n    - Authorization: Token\n        \n\nEndFragment  \n\nStartFragmentExample Response:EndFragment  \n  \n  \n{  \n\"message\": \"Review deleted successfully.\"  \n}"
+			},
+			"response": []
+		}
+	]
+}
